@@ -17,6 +17,10 @@
   font-size: 40px;
 }
 
+.login > h1 > span{
+  color: var(--secondary-main);
+}
+
 .login-form{
   background-color: white;
   width: 500px;

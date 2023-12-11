@@ -54,7 +54,7 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [user, setUser] = useState<userType>({
-    email: '',
+    email: hintEmail[0].value,
     password: '',
   });
 
@@ -88,7 +88,7 @@ function Login() {
 
   return (
     <div className={style.login}>
-      <h1>Welcome To SnapShare</h1>
+      <h1>Welcome To <span>SnapShare</span></h1>
       <form onSubmit={handleSubmit} className={style['login-form']}>
         <Select 
           className={style.email}
@@ -99,7 +99,7 @@ function Login() {
         />
         <Input 
           name='password'
-          placeHolder='Enter ANY Password You Want'
+          placeHolder='Enter Any Password You Want'
           type='password'
           onChange={handleChange}
           componentStyle={{
